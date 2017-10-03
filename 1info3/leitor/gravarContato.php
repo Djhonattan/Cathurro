@@ -1,11 +1,27 @@
 <?php
+//inclui o código PHP, executando-o
+include("cabeçalho.php");
 
+$cod = $_GET["cod"];
 
-foreach ($_POST as $contato) {
-	$partes=explode(" ",$contato);
-	for ($i=0; $i <=5 ; $i++) { 
-		
-	print($partes[$i]);
+//ESSE ARQUIVO EXIBE OS DADOS DO CONTATO CUJO CÓDIGO É IGUAL A $cod
+
+$dados=file("textoo.csv");
+
+foreach ($dados as $posicao => $linha) {
+	//quebra o texto da linha em pedaços, e esses pedaços vão para o array $colunas
+	$colunas = explode(";", $linha);
+	if($cod== $colunas[0]){
+		print('<h2>O contado '.$colunas[0].' tem nome '.$colunas[1].'</h2>');
 	}
 }
+
+
+
+//abrir o arquivo agenda.csv
+//percorrer
+//testar se a linha é a equivalente ao código GET
+//exibir todos os dados do contato
+
+include("rodape.php");
 ?>

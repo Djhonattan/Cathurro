@@ -7,9 +7,9 @@ print(date("l ,F d,Y , H:i:s"));
 //função file é um array e retorna seu conteudo para um ARRAY
 $dados=file("textoo.csv");
 //percorrer o array e exebir cada um dos elementos
-print("<table border=>");
+print('<table border=>"1">');
 $cont=0;
-foreach ($dados as $linha) {
+foreach ($dados as $posicao=>$linha) {
 	//partes é um array que recebe o resultado da separção do texto pelo separador ";"
 	$partes=explode(";",$linha);
 	if($cont==0){
@@ -24,14 +24,13 @@ foreach ($dados as $linha) {
 		print('
 		<tr>
 			<td>'.$partes[0].'</td>
-			<td>'.$partes[1].'</td>
+			<td><a href="gravarContato.php?cod='.$partes[0].'">'.$partes[1].'</a></td>
 			<td>'.$partes[2].'</td>
 			<td>'.$partes[3].'</td>
 		</tr>');
 
 	}
-
-
+print_r($posicao);
 //SEPARAR EM PEDAÇOS AS LINHAS COM EXPLODE 
 //PARTES E UM ARRAY QUE RECEBE UM RESULTADO DA SEPARAÇAO DO TEXTO PELO SEPARADOR (;)
 	$cont++;

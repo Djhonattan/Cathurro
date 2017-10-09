@@ -1,27 +1,34 @@
 <?php
-//inclui o código PHP, executando-o
-include("cabeçalho.php");
 
-$cod = $_GET["cod"];
+//array criado automaticamente contendo as variaveis enviadas por metodo POST
+print_r($_POST);
 
-//ESSE ARQUIVO EXIBE OS DADOS DO CONTATO CUJO CÓDIGO É IGUAL A $cod
-
-$dados=file("textoo.csv");
-
-foreach ($dados as $posicao => $linha) {
-	//quebra o texto da linha em pedaços, e esses pedaços vão para o array $colunas
-	$colunas = explode(";", $linha);
-	if($cod== $colunas[0]){
-		print('<h2>O contado '.$colunas[0].' tem nome '.$colunas[1].'</h2>');
-	}
+//abrir o arquivo e pegar o ultimo codigo existente
+$dados = file("textoo.csv");
+foreach($dados as $linha) {
+	$colunas = explode(",", $linha);
+	$cod_atual = $colunas[0];
 }
 
+$codigo = $cod_atual+1;
+$nome = $_POST['nome'];
+$telefone = $_POST['telefone'];
+$email = $_POST['email'];
+$foto = $_POST['foto'];
+
+$texto= $codigo.";".$nome.";".$telefone.";".$email.";".$foto;
+
+print($texto);
 
 
-//abrir o arquivo agenda.csv
-//percorrer
-//testar se a linha é a equivalente ao código GET
-//exibir todos os dados do contato
+//abrir o arquivo textoo.csv  em modo de escrita
 
-include("rodape.php");
+$arquivo = fopen("textoo.csv", "a+");
+//Eescrevendo no arquivo//a+ abre e posiciona o ponteiro no final do arquivo 
+fwrite($arquivo,"\n".$texto);
+//fechar o arquivo
+fclose($arquivo);
+
+print("acho que escreveu");
+
 ?>

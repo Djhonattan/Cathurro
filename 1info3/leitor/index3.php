@@ -11,9 +11,10 @@ print('<table border=>"1">');
 $cont=0;
 foreach ($dados as $posicao=>$linha) {
 	//partes é um array que recebe o resultado da separção do texto pelo separador ";"
-	$partes=explode(";",$linha);
+	$partes=explode(",",$linha);
 	if($cont==0){
 		print('
+			<a href="formContato.php">Inserir contato</a>
 		<tr>
 			<th>'.$partes[0].'</th>
 			<th>'.$partes[1].'</th>
@@ -24,7 +25,7 @@ foreach ($dados as $posicao=>$linha) {
 		print('
 		<tr>
 			<td>'.$partes[0].'</td>
-			<td><a href="gravarContato.php?cod='.$partes[0].'">'.$partes[1].'</a></td>
+			<td><a href="detalharContato.php?cod='.$partes[0].'">'.$partes[1].'</a></td>
 			<td>'.$partes[2].'</td>
 			<td>'.$partes[3].'</td>
 		</tr>');

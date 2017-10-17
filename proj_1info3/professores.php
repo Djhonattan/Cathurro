@@ -29,12 +29,13 @@ print_r($p1['nome']);
 //print_r($p1);
 
 function listaProfessores(){
-	$professores = array();
+	$professor = array();
 	//abrir arquivo
 	$dados = file("dados/professores.csv");
 	//percorrer com foreach
 	foreach ($dados as $posicao=>$linha) {
-		if ($posicao!=0){//SE POSICAO DIFERENTE DE ZERO
+		if ($posicao!=0){ //diferente de zero
+			//SE POSICAO DIFERENTE DE ZERO
 			$colunas = explode(",", $linha);
 			$professor['siape'] = $colunas[0];
 			$professor['nome']= $colunas[1];
@@ -56,7 +57,8 @@ function listaProfessores(){
 $lista = listaProfessores();
 print_r($lista);
 
- 
 $p1 = buscaProfessor(1578494);
 print_r($p1);
 */
+
+

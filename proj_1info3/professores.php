@@ -24,9 +24,6 @@ foreach ($dados as $linha) {
 return $professor;
 }
 
-$p1 = buscaProfessor(1578494);
-print_r($p1['nome']);
-//print_r($p1);
 
 function listaProfessores(){
 	$professor = array();

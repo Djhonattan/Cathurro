@@ -18,9 +18,6 @@ foreach ($dados as $linha) {
 }
 
 
-
-
-
 return $professor;
 }
 

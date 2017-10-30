@@ -1,18 +1,42 @@
 <?php 
-function listaAlunos(){
+function listaAlunosTurma($turma){
 	$alunos = array();
 	$dados = file("dados/alunos.csv");
 
 foreach ($dados as $posicao => $lista) {
-	if ($posicao!= 0) {
+		if ($posicao!= 0) {
 			$colunas= explode(",", $lista);
+			$aluno= array();
+			if($colunas[2] == $turma){ //se o aluno atuel é da $turmas
 			$aluno['matricula'] = $colunas[0];
 			$aluno['nome']= $colunas[1];
 			$aluno['turma']= $colunas[2];
 			$aluno['email']= $colunas[3];
 			$aluno['foto']= $colunas[4];
-
 			$alunos[] = $aluno;
+			}
+		}
+	}
+	return $alunos;
+}
+
+
+function listaAlunos(){
+	$alunos = array();
+	$dados = file("dados/alunos.csv");
+
+foreach ($dados as $posicao => $lista) {
+		if ($posicao!= 0) {
+			$colunas= explode(",", $lista);
+			$aluno= array();
+			if($colunas[2] == $turma){ //se o aluno atuel é da $turmas
+			$aluno['matricula'] = $colunas[0];
+			$aluno['nome']= $colunas[1];
+			$aluno['turma']= $colunas[2];
+			$aluno['email']= $colunas[3];
+			$aluno['foto']= $colunas[4];
+			$alunos[] = $aluno;
+			}
 		}
 	}
 	return $alunos;
@@ -21,7 +45,8 @@ foreach ($dados as $posicao => $lista) {
 print_r($lista);
 */
 
-function buscarAluno($codigo);
+
+function buscarAluno($codigo){
 
 $aluno = array();
 //abrir arquivo

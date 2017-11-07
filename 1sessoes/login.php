@@ -2,8 +2,6 @@
 //login.php
 	//inicia sessão
 	session_start();
-	//destroi a sessão
-	session_destroy();
 
 //capturando os dados enviados por POST
 	$login = $_POST['login'];

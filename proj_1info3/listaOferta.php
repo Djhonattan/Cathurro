@@ -13,7 +13,7 @@ include("cabecalho.php");
 
 <?php
 include("ofertas.php");
-// a funçao retorna um array contendo os ofertas
+// a funçao retorna um array contendo as ofertas
 $lista = listaOfertas();
 
 foreach ($lista as $oferta)  {

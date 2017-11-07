@@ -21,7 +21,6 @@ foreach ($dados as $linha) {
 return $professor;
 }
 
-
 function listaProfessores(){
 	$professor = array();
 	//abrir arquivo

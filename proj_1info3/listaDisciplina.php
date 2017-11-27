@@ -8,10 +8,11 @@ include("professores.php");
 
 <article class="coluna80">
 
-	<div class="coluna10">.</div>
+	<div cla*/ss="coluna10">.</div>
 <?php
 
 ?>
+
 	<!-- conteudo principal -->
 	<article class="coluna80">
 	<section class="lista">
@@ -25,7 +26,7 @@ $lista = listaOfertas(2017,'1info1');
 foreach ($lista as $oferta)  {
 	$disciplina = buscaDisciplina($oferta['cod_disciplina']);
 	$professor = buscaProfessor($oferta['cod_professor']);
-	echo ('<li>'.$disciplina['nome'].' - '.$professor['nome'].' </li>');
+	echo ('<li>'.$disciplina['nome'].' - '.$professor['nome'].'</li>');
 }
 ?>
 		</ul>
@@ -40,7 +41,9 @@ foreach ($lista as $oferta)  {
 $lista = listaOfertas(2017,'1info2');
 
 foreach ($lista as $oferta)  {
-	echo ('<li>'.$oferta['cod_disciplina'].' - '.$oferta['cod_professor'].' </li>');
+	$disciplina = buscaDisciplina($oferta['cod_disciplina']);
+	$professor = buscaProfessor($oferta['cod_professor']);
+	echo ('<li>'.$disciplina['nome'].' - '.$professor['nome'].' </li>');
 }
 ?>
 		</ul>
@@ -55,7 +58,9 @@ foreach ($lista as $oferta)  {
 $lista = listaOfertas(2017,'1info3');
 
 foreach ($lista as $oferta)  {
-	echo ('<li>'.$oferta['cod_disciplina'].' - '.$oferta['cod_professor'].' </li>');
+	$disciplina = buscaDisciplina($oferta['cod_disciplina']);
+	$professor = buscaProfessor($oferta['cod_professor']);
+	echo ('<li>'.$disciplina['nome'].' - '.$professor['nome'].' </li>');
 }
 ?>
 		</ul>

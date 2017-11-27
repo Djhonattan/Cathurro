@@ -13,7 +13,11 @@ foreach ($dados as $linha) {
 		$professor['siape'] = $colunas[0];
 		$professor['nome']= $colunas[1];
 		$professor['email']= $colunas[2];
-		$professor['foto']= $colunas[3];
+		if(isset($colunas[3])){
+			$professor['foto']= $colunas[3];
+		}else{
+			$professor['foto']= 'imagens/pessoa.png';
+		}
 	}
 }
 
@@ -49,9 +53,6 @@ function listaProfessores(){
 /* 
 $lista = listaProfessores();
 print_r($lista);
-
-$p1 = buscaProfessor(1578494);
-print_r($p1);
 */
-
-
+/*$p1 = buscaProfessor(1578494);
+print_r($p1);*/

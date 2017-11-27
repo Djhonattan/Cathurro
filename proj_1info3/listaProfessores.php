@@ -28,23 +28,3 @@ include("rodape.php");
 
 ?>
 
-
-
-
-
-
-
-
-
-
-
-<!--
-<form>
-		<input type="text" name=""  id="primeiro">
-		<input type="text" name="" id="segundo">
-		<input type="button" id="soma" value="soma"/>
-	</form>
-	<div id="resultado"></div>
-</body>
-</html>
--->

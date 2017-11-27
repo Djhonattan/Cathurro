@@ -42,8 +42,6 @@
    }
    ?>
 
-   <a href="inserir.php">Inserir</a>
-
 	<div class='divider'></div>
 	<!-- menu -->
 	
@@ -58,3 +56,21 @@
 	<div class='divider'></div>
 
 	<!-- colunas para centralizar -->
+	<form method="post" action="uploadFoto.php" enctype="multipart/form-data">
+
+
+	<label for="siape">Siape</label>
+	<input type="text" name="siape">
+
+	<label for="nome">Nome</label>
+	<input type="text" name="nome">
+
+	<label for="email">E-mail</label>
+	<input type="text" name="email">
+
+	<label for="foto">Foto</label>
+	<input type="file" name="foto">
+			
+	<input type="submit" name="entrar">
+		
+	</form>

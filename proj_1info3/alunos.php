@@ -29,7 +29,6 @@ foreach ($dados as $posicao => $lista) {
 		if ($posicao!= 0) {
 			$colunas= explode(",", $lista);
 			$aluno= array();
-			if($colunas[2] == $turma){ //se o aluno atuel é da $turmas
 			$aluno['matricula'] = $colunas[0];
 			$aluno['nome']= $colunas[1];
 			$aluno['turma']= $colunas[2];
@@ -38,12 +37,11 @@ foreach ($dados as $posicao => $lista) {
 			$alunos[] = $aluno;
 			}
 		}
-	}
 	return $alunos;
 }
 /*$lista= listaAlunos();
-print_r($lista);
-*/
+print_r($lista);*/
+
 
 
 function buscarAluno($codigo){

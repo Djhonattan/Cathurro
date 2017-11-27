@@ -27,7 +27,8 @@ $siape= $_GET['cod'];
 			<p>Nome: <?=$professor['nome']?></p>
 			<p>Email: <?=$professor['email']?></p>
 			<p>Disciplinas: (em progresso)</p>
-			<p>Sala: (em progresso)</p>   <!-- Incluir mais uma coluna com as salas no CSV -->
+			<p>Sala: (em progresso)</p> 
+			  <!-- Incluir mais uma coluna com as salas no CSV -->
 
 		</section>
 	</article>

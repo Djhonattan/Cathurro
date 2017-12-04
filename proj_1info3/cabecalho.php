@@ -1,13 +1,14 @@
 <?php
 	session_start();
-?>	
+?>
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/completo.css">
 	<link rel="stylesheet" type="text/css" href="css/geral.css">
 	<link rel="stylesheet" type="text/css" href="css/profs.css">
-	<link rel="stylesheet" type="text/css" href="css/login">
 	<title>Todos professores</title>
 	<meta charset="utf-8">
 </head>
@@ -49,12 +50,14 @@
 	
 	<nav class="menu">
 		<a href=""><section class="item menu">Próximas tarefas</section></a>
-		<a href=""><section class="item menu">Todas Tarefas</section></a>
+		<a href="listaTarefas.php"><section class="item menu">Todas Tarefas</section></a>
 		<a href=""><section class="item menu">Tarefas por disciplina</section></a>
 		<a href=""><section class="item menu">Tarefas por data</section></a>
+		<a href="listaTarefasTurma.php"><section class="item menu">Tarefas por turma</section></a>
 		<a href="listaProfessores.php"><section class="item menu ativo">Professores</section></a>
 		<a href="listaAlunos.php"><section class="item menu">Colegas</section></a>
 	</nav>
+
 	<div class='divider'></div>
 
 	<!-- colunas para centralizar -->

@@ -1,0 +1,24 @@
+listaAlunosTurma
+- acrescentar o nome da turma em cada coluna
+
+detalhaProfessor.php
+- a foto nao está aparecendo. Aparentemente, falta a foto clicável
+- lista das disciplinas do professor - trazer da ofertas.csv (bem parecido com a funcao que traz as disciplinas de uma turma)
+
+
+
+inserir.php
+- acrescentar o <article class="coluna80">
+
+
+cabecalho
+- tirar links que não funcionam (só deixar o href vazio)
+
+
+inserir.php
+- Verificar se está logado, caso contrário, não pode exibir o formulario - testar com o isset($_SESSION['login']){
+
+}else{
+ echo ("Acesso negado");
+}
+
